@@ -1,9 +1,12 @@
 export const buildProduct = (product) => {
     return `
-    <span>${product.handler}</span>
-    <span>${product.date}</span>
-    <span>${product.message}</span>
-    <img src"${product.image}" alt="Product image" />
+    <img src="${product.photo}" alt="Product image" />
+    <div class="info">
+    <div class="name">${product.name}</div>
+    <div class="description">${product.description}</div>
+    <div class="price">${product.price}</div>
+    <div class="transaction">${product.transaction}</div>
+    </div>
     `;
 }
 

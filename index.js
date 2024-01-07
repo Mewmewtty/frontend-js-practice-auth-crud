@@ -1,9 +1,19 @@
+import { notificationsController } from "./notifications/notificationsController.js";
 import { productListController } from "./product-list/productListController.js";
 
-const loadProductsButton = document.querySelector('#loadProducts');
-const productList = document.getElementById('products');
+const notifications = document.getElementById('notifications');
 
-loadProductsButton.addEventListener('click', () => {
+const showNotification = notificationsController(notifications);
 
+document.addEventListener('DOMContentLoaded', () => {
+    const productList = document.getElementById('products');
     productListController(productList);
+
+    productList.addEventListener('productsLoaded', (event) => {
+        showNotification(event.detail.message, event.detail.type);
+    })
+})
+
+window.addEventListener('offline', () => {
+    showNotification('Se ha perdido la conexión', 'error');
 })

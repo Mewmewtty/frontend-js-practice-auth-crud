@@ -1,9 +1,13 @@
 const transformProducts = (products) => {
     return products.map(product => ({
         handler: product.author,
+        photo: product.image,
         date: new Date().toISOString(),
-        message: product.message,
-        photo: product.image
+        name: product.name,
+        description: product.description,
+        price: product.price,
+        transaction: product.transaction
+        
     }))
 }
 
@@ -17,7 +21,7 @@ export const getProducts = async () => {
         parsedProducts = transformProducts(products)
         
     } catch (error) {
-        console.log("Algo malo ocurrió");
+        throw error;
 
     }
 
