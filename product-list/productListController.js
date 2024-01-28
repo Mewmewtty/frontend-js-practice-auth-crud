@@ -1,3 +1,4 @@
+import { dispatchEvent } from "../utils/dispatchEvent.js";
 import { getProducts } from "./productListModel.js";
 import { buildProduct, emptyProducts } from "./productListView.js";
 
@@ -42,11 +43,4 @@ const renderProducts = (products, productList) => {
         productList.appendChild(productContainer);
     
     })
-}
-const dispatchEvent = (eventName, data, element) => {
-    const event = new CustomEvent(eventName, {
-        detail: data
-    });
-
-    element.dispatchEvent(event);
 }
