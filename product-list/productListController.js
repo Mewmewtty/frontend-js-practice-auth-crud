@@ -6,10 +6,13 @@ export const productListController = async (productList) => {
     let products = [];
 
     try {
+        dispatchEvent('startLoadingProducts', null, productList);
         products = await getProducts();
     } catch (error) {   
         const event = createCustomEvent('error', 'Error cargando productos');
         productList.dispatchEvent(event);
+    } finally {
+        dispatchEvent('finishLoadingProducts', null, productList);
     }
 
     if (products.length === 0 ) {
@@ -40,4 +43,10 @@ const renderProducts = (products, productList) => {
     
     })
 }
+const dispatchEvent = (eventName, data, element) => {
+    const event = new CustomEvent(eventName, {
+        detail: data
+    });
 
+    element.dispatchEvent(event);
+}

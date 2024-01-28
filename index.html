@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Wallapop</title>
-
+        <link rel="stylesheet" href="./notifications/style.css" />
+        <link rel="stylesheet" href="./loader/style.css" />
+        
         <style>
             * {
                 box-sizing: border-box;
@@ -23,10 +25,7 @@
                 margin: 0 auto 20px;
                 text-align: center;
             }
-            #notifications  {
-
-            }
-            #buttons {
+            #session {
                 padding: 15px;
                 text-align: center;
             }
@@ -94,20 +93,7 @@
                 color: #FFF;
                 font-size: 13px;
             }
-            .notification {
-                border: 1 solid gray;
-                background-color: #FFF;
-                padding: 20px 40px;
-                position: absolute;
-                top: 15%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                z-index: 1000;
-                text-align: center;
-                font-size: 16px;
-                line-height: 22px;
-                font-weight: 400;
-            }
+            
            
             @media (min-width: 420px) {
                 #products {
@@ -131,9 +117,9 @@
     </head>
     <body>
         <h1>Wallapop</h1>
+        <nav id="session"></nav> 
+        <section id="loader"></section>
         <section id="notifications"></section>
-        <section id="buttons">
-        </section> 
         <section id="products"></section>
 
         <script type="module" src="./index.js"></script>

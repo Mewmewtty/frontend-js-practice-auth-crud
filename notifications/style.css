@@ -1,0 +1,14 @@
+.notification {
+    border: 1px solid gray;
+    background-color: #FFF;
+    padding: 20px 40px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
