@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear producto</title>
+    <link rel="stylesheet" href="./loader/style.css">
+    <link rel="stylesheet" href="./notifications/style.css" />
+</head>
+<body>
+    <section id="notifications"></section>
+    <form id="productCreation">
+        <label for="name">Título</label>
+        <input type="text" name="name" id="name" cols="30" rows="10"required></input>
+        <label for="description">Descripción</label>
+        <textarea name="description" id="description" cols="30" rows="10"required></textarea>
+        <label for="price">Precio</label>
+        <input type="text" name="price" id="price" cols="30" rows="10"required></input>
+        <label for="transaction">Compra/Venta</label>
+        <input type="text" name="transaction" id="transaction" cols="30" rows="10"required></input>
+
+        <button type="submit">Subir producto</button>
+
+        <script type="module" src="./product-creation/index.js"></script>
+    </form>
+</body>
+</html>
