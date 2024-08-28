@@ -7,13 +7,18 @@ export const signupController = (signupForm) => {
 const validateForm = async (event, signupForm) => {
     event.preventDefault();   
 
-    const email = signupForm.querySelector('#email');
-    const password = signupForm.querySelector('#password');
-    const passwordConfirmation = signupForm.querySelector('#password-confirmation');
+    const signupFormFormData = new FormData(signupForm);
+    const email = signupFormFormData.get('email');
+    const password = signupFormFormData.get('password');
+    const passwordConfirmation = signupFormFormData.get('password-confirmation');
+
+    //const email = signupForm.querySelector('#email');
+    //const password = signupForm.querySelector('#password');
+    //const passwordConfirmation = signupForm.querySelector('#password-confirmation');
 
     try {
         if(isFormValid(email, password, passwordConfirmation)) {
-            await createUser(email.value, password.value);
+            await createUser(email, password);
             dispatchEvent('userCreated', {
                 type: "success",
                 message: 'Usuario creado correctamente'
@@ -23,7 +28,7 @@ const validateForm = async (event, signupForm) => {
     } catch (error) {
         dispatchEvent('userCreated', {
             type: "error",
-            message: error,
+            message: error
         }, signupForm);
     }  
 }
@@ -36,7 +41,7 @@ const isEmailValid = (email) => {
     const emailRegExp = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
     let result = true;
 
-    if(!emailRegExp.test(email.value)) {
+    if(!emailRegExp.test(email)) {
        throw 'El email no es correcto';
         result = false;
     }

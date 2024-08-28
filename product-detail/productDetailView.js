@@ -1,6 +1,16 @@
 export const buildProduct = (product) => {
+    let productImage
+    
+    if(product.photo == undefined || product.photo == "null") {
+        productImage = "./img/no-image.png";
+    } else {
+        productImage = product.photo;
+    }
+   
     const productTemplate = `
-        <img src="${product.photo}" alt="Product image" />
+        <div class="product-image">
+            <img src="${productImage}" alt="Product image" />
+        </div>
         <div class="product-detail info">
             <div class="author">${product.handler}</div>
             <div class="name">${product.name}</div>

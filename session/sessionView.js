@@ -1,5 +1,5 @@
 export const buildUnauthorisedSession = () => {
-    return `<ul>
+    return `<ul class="btns-list">
     <li>
         <a href="./login.html">Login</a>
         <a href="./signup.html">Sign up</a>
@@ -8,5 +8,6 @@ export const buildUnauthorisedSession = () => {
 }
 
 export const buildAuthenticatedSession = () => {
-    return `<button>Log out</button>`;
+    return ` <a href="/product-creation.html">Subir producto</a>
+    <button>Log out</button>`;
 }

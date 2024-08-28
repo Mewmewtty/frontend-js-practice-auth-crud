@@ -1,7 +1,7 @@
 const parseProduct = (product) => {
     return {
         handler: product.user.username,
-        //photo: product.image,
+        photo: product.image,
         name: product.name,
         description: product.description,
         price: product.price,

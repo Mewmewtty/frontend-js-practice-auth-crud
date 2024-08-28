@@ -4,118 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Wallapop</title>
+        <link rel="stylesheet" href="./product-list/style.css" />
         <link rel="stylesheet" href="./notifications/style.css" />
         <link rel="stylesheet" href="./loader/style.css" />
-        
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            body {
-                font-family: "Roboto", Helvetica, sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f7f7f7;
-                color: #3a3a3a;
-            }
-            h1 {
-                background-color: #13C1AC;
-                color: #FFF;
-                padding: 10px;
-                margin: 0 auto 20px;
-                text-align: center;
-            }
-            #session {
-                padding: 15px;
-                text-align: center;
-            }
-            button {
-                background-color: #13C1AC;
-                color: #FFF;
-                border: none;
-                border-radius: 0;
-                padding: 10px;
-                font-weight: 600;
-                cursor: pointer;
-            }
-            button:hover {
-                background-color: #3f3f3f;
-            }
-            #products {
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                width: 100%;
-                padding: 10px;
-            }
-            .product {
-                border: 1px solid #CCC;
-                margin: 0 auto 10px auto;
-                background-color: #FFF;
-                width: 100%;
-                position: relative;
-            }
-            .product:hover img {
-                filter: brightness(80%);
-            }
-            .product p {
-                margin: 0;
-            }
-            .product img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover;
-            }
-            .info {
-                padding: 10px;
-            }
-            .name {
-                font-size: 16px;
-                line-height: 20px;
-                font-weight: 700;
-                margin-bottom: 15px;
-            }
-            .description {
-                margin-bottom: 10px;
-                font-size: 15px;
-                line-height: 19px;
-            }
-            .price {
-                font-weight: 600;
-            }
-            .transaction {
-                position: absolute;
-                top: 10px;
-                left: 0;
-                width: auto;
-                padding: 5px;
-                background-color: #13C1AC;
-                color: #FFF;
-                font-size: 13px;
-            }
-            
-           
-            @media (min-width: 420px) {
-                #products {
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    flex-wrap: wrap;
-                }
-                .product {
-                    width: 48%;
-                    margin: 0 1% 10px 1%;
-                }
-            }
-            @media (min-width: 768px) {
-                .product {
-                    width: 31%;
-                    max-width: 360px;
-                }
-            }
 
-        </style>
     </head>
-    <body>..
+    <body>
         
         <h1>Wallapop</h1>
         <nav id="session"></nav> 

@@ -15,7 +15,7 @@ const submitLogin = async (loginForm) => {
     try {
         dispatchEvent('startLoginUser', null, loginForm);
         const jwt = await loginUser(email, password);
-        alert('login OK');
+        alert('Correct login');
         localStorage.setItem('token', jwt);
         window.location = "./index.html";
     } catch (error) {
@@ -26,12 +26,12 @@ const submitLogin = async (loginForm) => {
 
 }
 const getLoginData = (loginForm) => {
-    //const formData = new FormData(loginForm);
-    //const email = formData.get('email');
-    //const password = formData.get('password');
+    const loginFormFormData = new FormData(loginForm);
+    const email = loginFormFormData.get('email');
+    const password = loginFormFormData.get('password');
     
-    const email = loginForm.querySelector('#email').value;
-    const password = loginForm.querySelector('#password').value;
+    //const email = loginForm.querySelector('#email').value;
+    //const password = loginForm.querySelector('#password').value;
     return {
         email: email, 
         password: password

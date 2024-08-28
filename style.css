@@ -1,0 +1,42 @@
+form {
+    max-width: 300px;
+    margin: 50px auto;
+    background-color: #e4efef;
+    padding: 30px;
+    border: 1px solid #cfedea;
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Roboto", Helvetica, sans-serif;
+    color: #3a3a3a;
+}
+form input, form textarea, form button {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #3a3a3a;
+    border-radius: 0;
+}
+input[type="file"], input[type="file"]:focus {
+    border: 0!important;
+}
+form input:focus, form textarea:focus {
+    outline: none;
+    border: 1px solid #13C1AC;
+}
+form button {
+    background-color: #13C1AC;
+    color: #FFF;
+    border: none;
+    border-radius: 0;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    border: 0!important;
+}
+form button:hover {
+    background-color: #3f3f3f;
+}
